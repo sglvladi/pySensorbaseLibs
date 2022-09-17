@@ -1,4 +1,5 @@
 import json
+import asyncio 
 
 from pysblibs.config import ConfigManager
 from pysblibs.madoka import MadokaController
@@ -15,14 +16,18 @@ def mqtt_callback(self, client, userdata, message):
         commands = json.loads(message.payload.decode('utf-8'))
         if 'fan_speed' in commands:
             self._logger.info(f"Fan speed command received: {commands['fan_speed']}")
-            madoka.set_fan_speed(commands['fan_speed']['cool'], commands['fan_speed']['heat'])
+            resp = madoka.set_fan_speed(commands['fan_speed']['cool'].upper(), commands['fan_speed']['heat'].upper())
+            print(resp)
 
 
 madoka_mac_address = 'B8:F2:55:01:25:E0'
 
 config = ConfigManager('config.json')
 
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
 mac = get_mac_address()
+print(mac)
 data = register_device(config['reg_token'], mac)
 config.set('user_id', data['user_id'])
 config[('mqtt', 'host')] = data['mqtthost']
