@@ -1,10 +1,10 @@
 {
-    "reg_token": "26807a10-b1ba-475a-bc89-3f4a9d438b6c",
+    "reg_token": "4149c89b-b910-468d-a5c8-a20be9a02769",
     "user_id": "1a56df80-c67e-11e8-8415-6fc631422887",
     "mqtt": {
         "host": "dev.sensorbase.io",
         "port": "1884",
-        "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxYTU2ZGY4MC1jNjdlLTExZTgtODQxNS02ZmM2MzE0MjI4ODciLCJhY3RvciI6IjAwOjAwOjAwOjAwOjAwOjExIiwiaWF0IjoxNjYzNDMxNDY5LCJleHAiOjE2NjYwMjM0NjksImlzcyI6ImF1dGguc2Vuc29yYmFzZS5pbyJ9.1P50x-SmSeuJ56yUGabi2N7802MtsaVUQO6Rz7yI2Fc",
+        "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxYTU2ZGY4MC1jNjdlLTExZTgtODQxNS02ZmM2MzE0MjI4ODciLCJhY3RvciI6IjAwOjAwOjAwOjAwOjAwOjExIiwiaWF0IjoxNjYzNDM3OTA3LCJleHAiOjE2NjYwMjk5MDcsImlzcyI6ImF1dGguc2Vuc29yYmFzZS5pbyJ9.ksG_BbJ2NNVj9YOmVlXsz0WgbrSXKl5XrqNBQ3XQjhU",
         "password": "1"
     }
 }
