@@ -107,11 +107,11 @@ class MqttController(Base):
         topic = self.get_topic(type, sensor_id)
         self.client.publish(topic, payload, qos, retain)
 
-    def send_sensor_disconnect(self, sensor_id, payload, qos=1, retain=False):
+    def send_sensor_disconnect(self, sensor_id, payload=1, qos=1, retain=False):
         self.send_message('disconnect', sensor_id, payload, qos, retain)
 
-    def send_device_disconnect(self):
-        self.send_message('disconnect', payload=1, qos=1, retain=True)
+    def send_device_disconnect(self, payload=1, qos=1, retain=False):
+        self.send_message('disconnect', payload=payload, qos=qos, retain=retain)
 
     def send_sensor_debug(self, sensor_id, payload, qos=1, retain=False):
         self.send_message('debug', sensor_id, payload, qos, retain)
