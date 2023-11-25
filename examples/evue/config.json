@@ -1,0 +1,13 @@
+{
+    "reg_token": "c7ad4ab9-105f-4bf9-bc73-711b37034a58",
+    "user_id": "1a56df80-c67e-11e8-8415-6fc631422887",
+    "mqtt": {
+        "host": "mqtt.sensorbase.io",
+        "port": "1884",
+        "user": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxYTU2ZGY4MC1jNjdlLTExZTgtODQxNS02ZmM2MzE0MjI4ODciLCJhY3RvciI6IjAwLTAwLTAwLTAwLTAxLTExIiwiaWF0IjoxNzAwOTM4ODAzLCJleHAiOjE3MDM1MzA4MDMsImlzcyI6ImF1dGguc2Vuc29yYmFzZS5pbyJ9.i4Xi9sP3eqMRbICdZpnN-0fgiUxxsDaObAb1xe18NH4",
+        "password": "1"
+    },
+    "model": "EmporiaVueGateway",
+    "hw_version": "1.0.1",
+    "fw_version": "1.0.1"
+}
