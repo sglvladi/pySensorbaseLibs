@@ -22,7 +22,7 @@ def get_mac_address(interface='wlan0'):
         The MAC address of the network interface.
     """
 
-    mac = "00:00:00:00:00:11"
+    mac = "00:00:00:00:01:11".strip()[0:17].upper().replace(":", "-")
     try:
         with open(f'/sys/class/net/{interface}/address', 'r') as f:
             mac = f.read().strip()[0:17].upper().replace(":", "-")
@@ -50,7 +50,7 @@ def get_local_ip(interface='wlan0'):
     return ni.ifaddresses(interface)[ni.AF_INET][0]['addr']
 
 
-def register_device(reg_key, mac):
+def register_device(payload):
     """
     Register a device with the Sensorbase server.
 
@@ -63,16 +63,11 @@ def register_device(reg_key, mac):
     -------
 
     """
+
+    reg_key = payload['token']
     if reg_key is None:
         raise Exception("Not Authorized")
 
-    payload = {
-        "mac": mac,
-        "hw_version": "1.0.1",
-        "fw_version": "1.0.1",
-        "model": "HubMadoka",
-        "token": reg_key
-    }
     headers = {
         "Accept-Encoding": "gzip,deflate",
         "Content-Type": "application/json",
